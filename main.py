@@ -1,4 +1,5 @@
 # Create an empty dictionary called 'robots'
+robots = {}
 
 # prompt the user for name
 
