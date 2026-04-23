@@ -22,6 +22,7 @@ while total_distance < 5 or total_distance > 500:
     total_distance = float(input("Enter total distance (5-500): "))
 
 #     CREATE an empty dictionary 'cargo_weights'
+cargo_weights = {}
 #     FOR each 'name' in 'robots':
 #         PROMPT for 'weight' (1-50 kg)
 #         VALIDATE 'weight' is within range; RE-PROMPT if not
