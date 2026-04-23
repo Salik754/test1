@@ -2,14 +2,25 @@
 robots = {}
 
 # prompt the user for name
+name = input("Enter robot name: ")
 
 # PROMPT user for 'zone' (Downtown, Suburbs, Industrial)
+zone = input("Enter robot zone (Downtown, Suburbs, Industrial): ")
 #         VALIDATE that 'zone' is correct; RE-PROMPT if not
+while zone not in ["Downtown", "Suburbs", "Industrial"]:
+    print("Invalid zone. Please try again.")
+    zone = input("Enter robot zone (Downtown, Suburbs, Industrial): ")
+
 #         STORE 'name' as key and 'zone' as value in 'robots'
+robots[name] = zone
 
 #     PROMPT user for 'total_distance' (5-500)
+total_distance = float(input("Enter total distance (5-500): "))
 #     VALIDATE 'total_distance' is within range; RE-PROMPT if not
-    
+while total_distance < 5 or total_distance > 500:
+    print("Invalid distance. Please try again.")
+    total_distance = float(input("Enter total distance (5-500): "))
+
 #     CREATE an empty dictionary 'cargo_weights'
 #     FOR each 'name' in 'robots':
 #         PROMPT for 'weight' (1-50 kg)
